@@ -5,6 +5,7 @@ import com.tique.simoclone.dto.OtpStatus;
 import com.tique.simoclone.dto.SmsResponse;
 import com.tique.simoclone.dto.SmsSender;
 import com.tique.simoclone.dto.SmsRequest;
+import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
@@ -36,27 +37,25 @@ public class TwilioOTPService implements SmsSender {
     @Override
     public SmsResponse sendSms(SmsRequest smsRequest) {
         SmsResponse smsResponse = null;
-      //  try {
+       try {
 
             PhoneNumber to = new PhoneNumber(smsRequest.getPhoneNumber());
             PhoneNumber from = new PhoneNumber(config.getTrialNumber());
             String otp = generateOTP();
             String otpMessage = "O codigo para recuperar a sua senha e: " + otp + " ,obrigado";
             //send Twilio sms
-//            Message message  = Message
-//                    .creator(to, from,otpMessage)
-//                    .create();
+              Message message  = Message
+                   .creator(to, from,otpMessage)
+                   .create();
 
             otpMap.put(smsRequest.getUserName(), otp);
 
 
             smsResponse = new SmsResponse(OtpStatus.DELIVERED, otpMessage);
            logger.info("Send sms " + smsRequest + " otp: " + otp);
-//        }catch (Exception e){
-//            smsResponse = new SmsResponse(OtpStatus.FAILED, e.getMessage());
-//        }
-
-        //return  Mono.just(smsResponse);
+        }catch (Exception e){
+            smsResponse = new SmsResponse(OtpStatus.FAILED, e.getMessage());
+        }
 
         return smsResponse;
     }

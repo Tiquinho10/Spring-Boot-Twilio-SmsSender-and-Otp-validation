@@ -21,7 +21,7 @@ public class TwillioInitializer {
     public void initTwilio(){
         Twilio.init(twilioConfig.getAccountSid(), twilioConfig.getAuthToken());
 
-        logger.info("twilio connected sucessful with account sid: " + twilioConfig.getAccountSid() + " and trial number: " + twilioConfig.getTrialNumber());
+        logger.info("twilio connected successfully with account sid: " + twilioConfig.getAccountSid() + " and trial number: " + twilioConfig.getTrialNumber());
     }
 
 }
