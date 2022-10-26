@@ -9,10 +9,7 @@ public class SmsRequest {
 
     private  String phoneNumber;
     private  String userName;
-    private String userPhoneNumber;
     private  String oneTimePassword;
-    private LocalDateTime createdAt;
-    private  LocalDateTime expiresAt;
 
 
 }

@@ -1,6 +1,6 @@
 package com.tique.simoclone.services;
 
-import com.tique.simoclone.dto.SendSms;
+import com.tique.simoclone.dto.SmsSender;
 import com.tique.simoclone.dto.SmsRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,24 +14,21 @@ public class TwilioService {
 
     private final static Logger logger = LoggerFactory.getLogger(TwilioService.class);
 
-    private  final SendSms  sendSms;
+    private  final SmsSender smsSender;
 
     private final TwilioOTPService otpService;
 
-    public TwilioService(@Qualifier("twilio") SendSms sendSms, TwilioOTPService otpService) {
-        this.sendSms =  sendSms;
+    public TwilioService(@Qualifier("twilio") SmsSender smsSender, TwilioOTPService otpService) {
+        this.smsSender = smsSender;
         this.otpService = otpService;
     }
 
-    public void sendSms(SmsRequest smsRequest, String otp){
-         sendSms.sendSms(smsRequest, otp);
+    public void sendSms(SmsRequest smsRequest){
+         smsSender.sendSms(smsRequest);
     }
 
     public SmsRequest validateOtp(SmsRequest smsRequest){
         logger.info("validate otp request:" + smsRequest);
-
-        logger.info("current time: " + LocalDateTime.now());
-
          otpService.validateOTP(smsRequest.getOneTimePassword(), smsRequest.getUserName());
 
          return smsRequest;
