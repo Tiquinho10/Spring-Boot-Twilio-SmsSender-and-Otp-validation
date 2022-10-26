@@ -1,15 +1,15 @@
-package com.tique.simoclone;
+package com.tique.twiliosms;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SimoCloneApplication {
+public class twilioSmsApplication {
 
 
 
 	public static void main(String[] args) {
-		SpringApplication.run(SimoCloneApplication.class, args);
+		SpringApplication.run(twilioSmsApplication.class, args);
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.tique.simoclone.dto;
+package com.tique.twiliosms.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

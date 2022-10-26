@@ -1,10 +1,10 @@
-package com.tique.simoclone.services;
+package com.tique.twiliosms.services;
 
-import com.tique.simoclone.config.TwilioConfig;
-import com.tique.simoclone.dto.OtpStatus;
-import com.tique.simoclone.dto.SmsResponse;
-import com.tique.simoclone.dto.SmsSender;
-import com.tique.simoclone.dto.SmsRequest;
+import com.tique.twiliosms.config.TwilioConfig;
+import com.tique.twiliosms.dto.OtpStatus;
+import com.tique.twiliosms.dto.SmsResponse;
+import com.tique.twiliosms.dto.SmsSender;
+import com.tique.twiliosms.dto.SmsRequest;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
 import lombok.AllArgsConstructor;
@@ -13,7 +13,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.text.DecimalFormat;
-import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;

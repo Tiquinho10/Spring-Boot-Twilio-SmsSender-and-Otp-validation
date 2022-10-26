@@ -1,8 +1,8 @@
-package com.tique.simoclone.controller;
+package com.tique.twiliosms.controller;
 
 
-import com.tique.simoclone.dto.SmsRequest;
-import com.tique.simoclone.services.TwilioService;
+import com.tique.twiliosms.dto.SmsRequest;
+import com.tique.twiliosms.services.TwilioService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

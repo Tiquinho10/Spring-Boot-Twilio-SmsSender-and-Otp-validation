@@ -1,8 +1,6 @@
-package com.tique.simoclone.dto;
+package com.tique.twiliosms.dto;
 
 import lombok.Data;
-
-import java.time.LocalDateTime;
 
 @Data
 public class SmsRequest {

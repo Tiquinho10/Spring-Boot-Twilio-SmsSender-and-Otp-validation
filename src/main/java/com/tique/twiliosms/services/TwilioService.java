@@ -1,13 +1,11 @@
-package com.tique.simoclone.services;
+package com.tique.twiliosms.services;
 
-import com.tique.simoclone.dto.SmsSender;
-import com.tique.simoclone.dto.SmsRequest;
+import com.tique.twiliosms.dto.SmsSender;
+import com.tique.twiliosms.dto.SmsRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
-
-import java.time.LocalDateTime;
 
 @Service
 public class TwilioService {

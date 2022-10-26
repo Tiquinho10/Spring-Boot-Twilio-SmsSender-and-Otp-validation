@@ -1,4 +1,4 @@
-package com.tique.simoclone.config;
+package com.tique.twiliosms.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

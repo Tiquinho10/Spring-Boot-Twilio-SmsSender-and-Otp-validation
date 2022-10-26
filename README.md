@@ -1,4 +1,4 @@
-# Twillio SmsSender and Otp validation
+# Spring Boot Twilio SmsSender and Otp validation
 
 
 
@@ -32,7 +32,7 @@
 
 - ``Java 17``
 - ``Spring Boot``
-- ``Twillio sdk``
+- ``Twilio sdk``
 - ``Lombok``
 - ``maven``
 
@@ -50,11 +50,11 @@
 
 ## Endpoints no Postman
 
-- Coleção  Postman de todas operacoes e endpoints do projecto add link (https://www.getpostman.com/collections/64c2b5731dadd64259d5)
+- Coleção  Postman de todas operacoes e endpoints do projecto (https://www.getpostman.com/collections/9e2d50ace3bb7c463cf6)
 
 ## Requisitos
 
-- Para o envio de sms é  necessario possuir uma conta [Twilio add link](twilio link);<br>
+- Para o envio de sms é  necessario possuir uma conta [Twilio](https://www.twilio.com/pt-br/);<br>
 
 
   Edite o ficheiro application.properties com os seus dados: 
